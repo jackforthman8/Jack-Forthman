@@ -1,27 +1,93 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
-
 <meta charset="UTF-8">
-	
 <title>HTML Practice 6 - Tables</title>
-
 <style type="text/css">
+    /* Step 3: Center the div containing the table */
+    .center-div {
+        text-align: center;
+    }
 
+    /* Step 3: Table centering for non-IE browsers and width setting */
+    .schedule-table {
+        margin: auto;
+        width: 550px;
+        border-collapse: collapse;
+    }
 
+    /* Step 5: Caption formatting with dark green color (#003300) */
+    .schedule-caption {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #003300;
+        margin-bottom: 10px;
+    }
+
+    /* Step 6: First column colgroup style */
+    .col-first {
+        background-color: #CCCCCC;
+        width: 25%;
+    }
+
+    /* Step 6 & 7: Days colgroup background color (#99FF66) and width */
+    .days {
+        background-color: #99FF66;
+        width: 15%;
+    }
+
+    /* Cell borders, padding, and alignment */
+    .schedule-table th, .schedule-table td {
+        border: 1px solid #333333;
+        padding: 8px;
+        text-align: center;
+    }
 </style>
 </head>
 <body>
-<div >
-   <table >
-	
+
+<div class="center-div">
+   <table class="schedule-table" border="1" cellspacing="0" cellpadding="5">
+      <!-- Step 5: Caption with class applied -->
+      <caption class="schedule-caption">My Class Schedule</caption>
+      
+      <!-- Step 6: Colgroups -->
+      <colgroup class="col-first"></colgroup>
+      <colgroup class="days" span="5"></colgroup>
+
+      <!-- Row 1: Headers -->
+      <tr>
+          <th>Courses</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+      </tr>
+
+      <!-- Row 2: INFO 1120 -->
+      <tr>
+          <th>INFO 1120</th>
+          <td>&nbsp;</td>
+          <td>9-11</td>
+          <td>&nbsp;</td>
+          <td>9-11</td>
+          <td rowspan="2">&nbsp;</td>
+      </tr>
+
+      <!-- Row 3: MATH 1010 -->
+      <tr>
+          <th>MATH 1010</th>
+          <td colspan="4">12-1</td>
+      </tr>
+
+      <!-- Row 4: INFO 2420 -->
+      <tr>
+          <th>INFO 2420</th>
+          <td colspan="5">Online Available 24/7</td>
+      </tr>
    </table>
 </div>
 
-
-
 </body>
 </html>
-
