@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Practice 1 - Calculations</title>
+
+    <script type="text/javascript">
+
+        // Variables used for calculations
+        var secs_per_min = 60;
+        var mins_per_hour = 60;
+        var hours_per_day = 24;
+        var days_per_year = 365;
+
+        // Calculate seconds per day and year
+        var secs_per_day =
+            secs_per_min * mins_per_hour * hours_per_day;
+
+        var secs_per_year = secs_per_day * days_per_year;
+
+        // Display the calculation
+        document.writeln("<b>The monkey dances ");
+        document.writeln(secs_per_year);
+        document.writeln(" seconds per year.</b><br><br>");
+
+        // Ask the user for Mad Lib information
+        var name = prompt("Enter a name:");
+        var verb = prompt("Enter a past-tense verb:");
+        var adjective = prompt("Enter a descriptive adjective:");
+
+        // Combine the user responses into a sentence
+        var Madlib = name + " " + verb +
+            " into the library, with the " +
+            adjective + " candlestick.";
+
+        // Display the completed Mad Lib
+        document.writeln("<h2>Mad Lib Results</h2>");
+        document.writeln(Madlib);
+
+    </script>
+</head>
+
+<body>
+</body>
+</html>
