@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Practice 1 - Set CSS</title>
+
+    <script type="text/javascript">
+
+        // Change background and heading styles
+        function changecolor(code) {
+
+            var myHeading = document.getElementById("Top");
+
+            // Change the background color
+            document.body.style.backgroundColor = code;
+
+            if (code == "blue") {
+
+                myHeading.style.color = "white";
+                myHeading.style.textDecoration = "none";
+                myHeading.style.textAlign = "right";
+                myHeading.style.fontSize = "30px";
+
+            } else if (code == "red") {
+
+                myHeading.style.color = "black";
+                myHeading.style.textDecoration = "none";
+                myHeading.style.textAlign = "center";
+                myHeading.style.fontSize = "44px";
+
+            } else if (code == "yellow") {
+
+                myHeading.style.color = "red";
+                myHeading.style.textDecoration = "underline";
+                myHeading.style.textAlign = "center";
+                myHeading.style.fontSize = "24px";
+
+            } else {
+
+                myHeading.style.color = "pink";
+                myHeading.style.textDecoration = "none";
+                myHeading.style.fontSize = "44px";
+                myHeading.style.textAlign = "left";
+
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="changecolor('red');">
+
+    <h1 id="Top">Changing CSS Properties in JavaScript</h1>
+
+    <form>
+        <input type="button" value="RED"
+            onclick="changecolor('red')" />
+
+        <input type="button" value="YELLOW"
+            onclick="changecolor('yellow')" />
+
+        <input type="button" value="BLUE"
+            onclick="changecolor('blue')" />
+
+        <input type="button" value="WHITE"
+            onclick="changecolor('white')" />
+    </form>
+
+</body>
+</html>
