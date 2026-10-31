@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Practice 1 - Event Handler</title>
+
+    <script type="text/javascript">
+
+        // Display the text entered by the user
+        function MsgBox(textstring) {
+            alert("You typed: " + textstring);
+
+            // Clear the textbox after displaying the alert
+            document.myForm.myText.value = "";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>JavaScript Event Handler Example</h1>
+
+    <p>Enter text and move your mouse over the button.</p>
+
+    <form name="myForm">
+        <input name="myText" type="text" />
+
+        <input
+            name="submit"
+            type="button"
+            value="Show Me"
+            onMouseOver="MsgBox(document.myForm.myText.value)"
+        />
+    </form>
+</body>
+</html>
