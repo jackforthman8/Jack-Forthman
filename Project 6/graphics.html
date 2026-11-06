@@ -1,61 +1,337 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Extreme Honeymoons | Project 6 Graphics</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#e8e1d2;color:#17394a;font-family:Arial,sans-serif;text-align:center}
-main{max-width:960px;margin:24px auto;padding:25px 18px;background:#fff9ee;border:1px solid #d7c8a9;border-radius:12px}
-h1{margin:10px 0 5px}p{line-height:1.5}.rollovers{display:flex;flex-direction:column;align-items:center;gap:14px;margin:20px 0}
-.rollovers img{display:block;border:0}.rollovers button{background:none;border:0;cursor:pointer;padding:0}
-#thumbs,#image{max-width:700px;text-align:center;margin:0 auto;color:#183b34;padding:10px}
-#thumbs{margin-top:15px;display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-#thumbs img{width:150px;height:100px;object-fit:cover;border:2px solid #b9a98d;border-radius:5px;cursor:pointer}
-#thumbs img:hover,#thumbs img:focus{border-color:#225b4e;outline:2px solid #225b4e}
-#image{min-height:340px}#theImage{width:400px;height:267px;max-width:100%;object-fit:cover;border-radius:5px;box-shadow:0 4px 15px #0002}
-#bottomText{margin:12px 0 0}.background-preview{width:900px;max-width:100%;height:auto;display:block;margin:16px auto;border:1px solid #c6b18e}
-.instructions{font-style:italic}footer{font-size:13px;color:#53635d;margin-top:18px}@media(max-width:500px){main{margin:0;border-radius:0}#thumbs img{width:125px;height:84px}}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #e8e1d2;
+    color: #17394a;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+main {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 25px 18px;
+    background: #fff9ee;
+    border: 1px solid #d7c8a9;
+    border-radius: 12px;
+}
+
+h1 {
+    margin: 10px 0 5px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.rollovers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.rollovers img {
+    display: block;
+    border: 0;
+}
+
+.rollovers button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+#thumbs, #image {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    color: #183b34;
+    padding: 10px;
+}
+
+#thumbs {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#thumbs img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #b9a98d;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#thumbs img:hover,
+#thumbs img:focus {
+    border-color: #225b4e;
+    outline: 2px solid #225b4e;
+}
+
+#image {
+    min-height: 340px;
+}
+
+#theImage {
+    width: 400px;
+    height: 267px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px #0002;
+}
+
+#bottomText {
+    margin: 12px 0 0;
+}
+
+.background-preview {
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px auto;
+    border: 1px solid #c6b18e;
+}
+
+.instructions {
+    font-style: italic;
+}
+
+footer {
+    font-size: 13px;
+    color: #53635d;
+    margin-top: 18px;
+}
+
+@media(max-width:500px) {
+    main {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    #thumbs img {
+        width: 125px;
+        height: 84px;
+    }
+}
 </style>
+
 <script>
-'use strict';
-const imgArray=['Image1Lg.jpg','Image2Lg.jpg','Image3Lg.jpg','Image4Lg.jpg'];
-const titleArray=['Mountain Biking Adventure','Scuba Diving Honeymoon','Snowboarding Together','Mountain Hiking Escape'];
-const imgPath='images/fullsize/';
-function swapImage(imgID){
- const theImage=document.getElementById('theImage');
- const textDiv=document.getElementById('bottomText');
- theImage.src=imgPath+imgArray[imgID];
- theImage.alt=titleArray[imgID];
- textDiv.textContent=titleArray[imgID];
+"use strict";
+
+// Full-size image filenames
+const imgArray = [
+    "Image1Lg.jpg",
+    "Image2Lg.jpg",
+    "Image3Lg.jpg",
+    "Image4Lg.jpg"
+];
+
+// Titles displayed beneath the large images
+const titleArray = [
+    "Mountain Biking Adventure",
+    "Scuba Diving Honeymoon",
+    "Snowboarding Together",
+    "Mountain Hiking Escape"
+];
+
+// Correct GitHub image folder path
+const imgPath = "Images/fullsize/";
+
+// Change large image and title when hovering
+function swapImage(imgID) {
+
+    const theImage = document.getElementById("theImage");
+    const textDiv = document.getElementById("bottomText");
+
+    theImage.src = imgPath + imgArray[imgID];
+
+    theImage.alt = titleArray[imgID];
+
+    textDiv.textContent = titleArray[imgID];
 }
-function preloadImages(){
- imgArray.forEach(name=>{const image=new Image();image.src=imgPath+name;});
- ['print1.jpg','print2.jpg','logo1.jpg','logo2.jpg'].forEach(name=>{const image=new Image();image.src='images/'+name;});
+
+// Preload images for smoother transitions
+function preloadImages() {
+
+    imgArray.forEach(function(name) {
+        const image = new Image();
+        image.src = imgPath + name;
+    });
+
+    [
+        "print1.jpg",
+        "print2.jpg",
+        "logo1.jpg",
+        "logo2.jpg"
+    ].forEach(function(name) {
+
+        const image = new Image();
+        image.src = "Images/" + name;
+
+    });
 }
-function swapMe(elementId,newImage){document.getElementById(elementId).src='images/'+newImage;}
+
+// Print button and logo rollover function
+function swapMe(elementId, newImage) {
+
+    document.getElementById(elementId).src =
+        "Images/" + newImage;
+
+}
 </script>
+
 </head>
+
 <body onload="preloadImages()">
+
 <main>
+
 <h1>Extreme Honeymoons</h1>
-<p class="instructions">Hover over the print button, logo, and adventure thumbnails to see JavaScript image swaps.</p>
+
+<p class="instructions">
+Hover over the print button, logo, and adventure thumbnails
+to see JavaScript image swaps.
+</p>
+
+<!-- PRINT BUTTON ROLLOVER -->
+
 <div class="rollovers">
-<button type="button" aria-label="Print Page" onclick="window.print()" onmouseover="swapMe('print','print2.jpg')" onmouseout="swapMe('print','print1.jpg')" onfocus="swapMe('print','print2.jpg')" onblur="swapMe('print','print1.jpg')"><img id="print" src="images/print1.jpg" alt="Print Page" width="200" height="50"></button>
-<a href="graphics.htm" aria-label="Extreme Honeymoons gallery home" onmouseover="swapMe('logo','logo2.jpg')" onmouseout="swapMe('logo','logo1.jpg')" onfocus="swapMe('logo','logo2.jpg')" onblur="swapMe('logo','logo1.jpg')"><img id="logo" src="images/logo1.jpg" alt="Extreme Honeymoons logo" width="240" height="130"></a>
+
+<button
+    type="button"
+    aria-label="Print Page"
+    onclick="window.print()"
+    onmouseover="swapMe('print','print2.jpg')"
+    onmouseout="swapMe('print','print1.jpg')"
+    onfocus="swapMe('print','print2.jpg')"
+    onblur="swapMe('print','print1.jpg')">
+
+    <img
+        id="print"
+        src="Images/print1.jpg"
+        alt="Print Page"
+        width="200"
+        height="50">
+
+</button>
+
+<!-- LOGO ROLLOVER -->
+
+<a
+    href="graphics.html"
+    aria-label="Extreme Honeymoons gallery home"
+    onmouseover="swapMe('logo','logo2.jpg')"
+    onmouseout="swapMe('logo','logo1.jpg')"
+    onfocus="swapMe('logo','logo2.jpg')"
+    onblur="swapMe('logo','logo1.jpg')">
+
+    <img
+        id="logo"
+        src="Images/logo1.jpg"
+        alt="Extreme Honeymoons logo"
+        width="240"
+        height="130">
+
+</a>
+
 </div>
+
+<!-- IMAGE SWAP GALLERY -->
+
 <h2>Honeymoon Adventure Gallery</h2>
+
 <div id="thumbs">
-<img src="images/thumbnails/Image1Sm.jpg" alt="Mountain Biking Adventure thumbnail" tabindex="0" onmouseover="swapImage(0)" onfocus="swapImage(0)">
-<img src="images/thumbnails/Image2Sm.jpg" alt="Scuba Diving Honeymoon thumbnail" tabindex="0" onmouseover="swapImage(1)" onfocus="swapImage(1)">
-<img src="images/thumbnails/Image3Sm.jpg" alt="Snowboarding Together thumbnail" tabindex="0" onmouseover="swapImage(2)" onfocus="swapImage(2)">
-<img src="images/thumbnails/Image4Sm.jpg" alt="Mountain Hiking Escape thumbnail" tabindex="0" onmouseover="swapImage(3)" onfocus="swapImage(3)">
+
+<img
+    src="Images/thumbnails/Image1Sm.jpg"
+    alt="Mountain Biking Adventure thumbnail"
+    tabindex="0"
+    onmouseover="swapImage(0)"
+    onfocus="swapImage(0)">
+
+<img
+    src="Images/thumbnails/Image2Sm.jpg"
+    alt="Scuba Diving Honeymoon thumbnail"
+    tabindex="0"
+    onmouseover="swapImage(1)"
+    onfocus="swapImage(1)">
+
+<img
+    src="Images/thumbnails/Image3Sm.jpg"
+    alt="Snowboarding Together thumbnail"
+    tabindex="0"
+    onmouseover="swapImage(2)"
+    onfocus="swapImage(2)">
+
+<img
+    src="Images/thumbnails/Image4Sm.jpg"
+    alt="Mountain Hiking Escape thumbnail"
+    tabindex="0"
+    onmouseover="swapImage(3)"
+    onfocus="swapImage(3)">
+
 </div>
-<div id="image"><img id="theImage" src="images/fullsize/Image1Lg.jpg" alt="Mountain Biking Adventure" width="400" height="267"><h3 id="bottomText">Mountain Biking Adventure</h3></div>
+
+<!-- LARGE IMAGE DISPLAY -->
+
+<div id="image">
+
+<img
+    id="theImage"
+    src="Images/fullsize/Image1Lg.jpg"
+    alt="Mountain Biking Adventure"
+    width="400"
+    height="267">
+
+<h3 id="bottomText">
+Mountain Biking Adventure
+</h3>
+
+</div>
+
+<!-- TWO-COLUMN BACKGROUND -->
+
 <h2>Repeatable Two-Column Background</h2>
-<p>900 × 150 pixels, with a 250-pixel left column and a 650-pixel right column.</p>
-<img class="background-preview" src="images/2colback.jpg" width="900" height="150" alt="Two-column repeatable background with blue mountain-patterned sidebar and sand-colored main area">
-<footer>INFO 2420 · Project 6 · JavaScript Behaviors</footer>
+
+<p>
+900 × 150 pixels, with a 250-pixel left column
+and a 650-pixel right column.
+</p>
+
+<img
+    class="background-preview"
+    src="Images/2colback.jpg"
+    width="900"
+    height="150"
+    alt="Two-column repeatable background with blue mountain-patterned sidebar and sand-colored main area">
+
+<footer>
+INFO 2420 · Project 6 · JavaScript Behaviors
+</footer>
+
 </main>
+
 </body>
 </html>
