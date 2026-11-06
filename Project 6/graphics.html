@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,9 @@
 <title>Extreme Honeymoons | Project 6 Graphics</title>
 
 <style>
+
+/* General Page Styling */
+
 * {
     box-sizing: border-box;
 }
@@ -33,9 +37,15 @@ h1 {
     margin: 10px 0 5px;
 }
 
+h2 {
+    margin-top: 30px;
+}
+
 p {
     line-height: 1.5;
 }
+
+/* Print Button and Logo */
 
 .rollovers {
     display: flex;
@@ -56,6 +66,8 @@ p {
     cursor: pointer;
     padding: 0;
 }
+
+/* Thumbnail and Large Image Containers */
 
 #thumbs, #image {
     max-width: 700px;
@@ -105,6 +117,8 @@ p {
     margin: 12px 0 0;
 }
 
+/* Two Column Background Preview */
+
 .background-preview {
     width: 900px;
     max-width: 100%;
@@ -124,7 +138,10 @@ footer {
     margin-top: 18px;
 }
 
-@media(max-width:500px) {
+/* Mobile Screen Styling */
+
+@media (max-width: 500px) {
+
     main {
         margin: 0;
         border-radius: 0;
@@ -134,13 +151,22 @@ footer {
         width: 125px;
         height: 84px;
     }
+
 }
+
 </style>
 
 <script>
+
 "use strict";
 
-// Full-size image filenames
+/*
+Project 6 - Extreme Honeymoons
+JavaScript Image Swaps and Rollovers
+*/
+
+// Array containing full-size image filenames
+
 const imgArray = [
     "Image1Lg.jpg",
     "Image2Lg.jpg",
@@ -148,7 +174,8 @@ const imgArray = [
     "Image4Lg.jpg"
 ];
 
-// Titles displayed beneath the large images
+// Array containing image titles
+
 const titleArray = [
     "Mountain Biking Adventure",
     "Scuba Diving Honeymoon",
@@ -156,29 +183,54 @@ const titleArray = [
     "Mountain Hiking Escape"
 ];
 
-// Correct GitHub image folder path
-const imgPath = "Images/fullsize/";
+// All photographs are directly inside Images
 
-// Change large image and title when hovering
+const imgPath = "Images/";
+
+/*
+Function: swapImage
+Changes the large photograph and its title
+when the user hovers over a thumbnail.
+*/
+
 function swapImage(imgID) {
 
-    const theImage = document.getElementById("theImage");
-    const textDiv = document.getElementById("bottomText");
+    const theImage =
+        document.getElementById("theImage");
 
-    theImage.src = imgPath + imgArray[imgID];
+    const textDiv =
+        document.getElementById("bottomText");
 
-    theImage.alt = titleArray[imgID];
+    theImage.src =
+        imgPath + imgArray[imgID];
 
-    textDiv.textContent = titleArray[imgID];
+    theImage.alt =
+        titleArray[imgID];
+
+    textDiv.textContent =
+        titleArray[imgID];
+
 }
 
-// Preload images for smoother transitions
+/*
+Function: preloadImages
+Loads images before the user interacts
+with the webpage.
+*/
+
 function preloadImages() {
 
+    // Preload full-size photographs
+
     imgArray.forEach(function(name) {
+
         const image = new Image();
+
         image.src = imgPath + name;
+
     });
+
+    // Preload print buttons and logos
 
     [
         "print1.jpg",
@@ -188,18 +240,26 @@ function preloadImages() {
     ].forEach(function(name) {
 
         const image = new Image();
+
         image.src = "Images/" + name;
 
     });
+
 }
 
-// Print button and logo rollover function
+/*
+Function: swapMe
+Changes the print button or logo image
+when the mouse enters or leaves.
+*/
+
 function swapMe(elementId, newImage) {
 
     document.getElementById(elementId).src =
         "Images/" + newImage;
 
 }
+
 </script>
 
 </head>
@@ -208,14 +268,16 @@ function swapMe(elementId, newImage) {
 
 <main>
 
+<!-- Website Heading -->
+
 <h1>Extreme Honeymoons</h1>
 
 <p class="instructions">
-Hover over the print button, logo, and adventure thumbnails
-to see JavaScript image swaps.
+Hover over the print button, logo, and adventure
+thumbnails to see JavaScript image swaps.
 </p>
 
-<!-- PRINT BUTTON ROLLOVER -->
+<!-- Print Button Rollover -->
 
 <div class="rollovers">
 
@@ -237,7 +299,7 @@ to see JavaScript image swaps.
 
 </button>
 
-<!-- LOGO ROLLOVER -->
+<!-- Logo Rollover -->
 
 <a
     href="graphics.html"
@@ -258,35 +320,37 @@ to see JavaScript image swaps.
 
 </div>
 
-<!-- IMAGE SWAP GALLERY -->
+<!-- Adventure Image Gallery -->
 
 <h2>Honeymoon Adventure Gallery</h2>
+
+<!-- Four Thumbnail Images -->
 
 <div id="thumbs">
 
 <img
-    src="Images/thumbnails/Image1Sm.jpg"
+    src="Images/Image1Sm.jpg"
     alt="Mountain Biking Adventure thumbnail"
     tabindex="0"
     onmouseover="swapImage(0)"
     onfocus="swapImage(0)">
 
 <img
-    src="Images/thumbnails/Image2Sm.jpg"
+    src="Images/Image2Sm.jpg"
     alt="Scuba Diving Honeymoon thumbnail"
     tabindex="0"
     onmouseover="swapImage(1)"
     onfocus="swapImage(1)">
 
 <img
-    src="Images/thumbnails/Image3Sm.jpg"
+    src="Images/Image3Sm.jpg"
     alt="Snowboarding Together thumbnail"
     tabindex="0"
     onmouseover="swapImage(2)"
     onfocus="swapImage(2)">
 
 <img
-    src="Images/thumbnails/Image4Sm.jpg"
+    src="Images/Image4Sm.jpg"
     alt="Mountain Hiking Escape thumbnail"
     tabindex="0"
     onmouseover="swapImage(3)"
@@ -294,13 +358,13 @@ to see JavaScript image swaps.
 
 </div>
 
-<!-- LARGE IMAGE DISPLAY -->
+<!-- Large Image Display -->
 
 <div id="image">
 
 <img
     id="theImage"
-    src="Images/fullsize/Image1Lg.jpg"
+    src="Images/Image1Lg.jpg"
     alt="Mountain Biking Adventure"
     width="400"
     height="267">
@@ -311,7 +375,7 @@ Mountain Biking Adventure
 
 </div>
 
-<!-- TWO-COLUMN BACKGROUND -->
+<!-- Repeatable Two Column Background -->
 
 <h2>Repeatable Two-Column Background</h2>
 
@@ -325,10 +389,13 @@ and a 650-pixel right column.
     src="Images/2colback.jpg"
     width="900"
     height="150"
-    alt="Two-column repeatable background with blue mountain-patterned sidebar and sand-colored main area">
+    alt="Two-column repeatable background with blue
+    mountain-patterned sidebar and sand-colored main area">
+
+<!-- Footer -->
 
 <footer>
-INFO 2420 · Project 6 · JavaScript Behaviors
+INFO 2420 | Project 6 | JavaScript Behaviors
 </footer>
 
 </main>
