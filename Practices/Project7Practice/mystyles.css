@@ -1,0 +1,71 @@
+/* Project 7 Practice: CSS website layout */
+body {
+  margin: 0;
+  background-image: url('Images/background.gif');
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+}
+header {
+  box-sizing: border-box;
+  width: 766px;
+  height: 165px;
+  background-color: #CCCCCC;
+  text-align: center;
+  padding-top: 10px;
+  border: dashed medium navy;
+  margin: auto;
+}
+section {
+  box-sizing: border-box;
+  width: 766px;
+  background-image: url('Images/inner_background.gif');
+  background-repeat: repeat-y;
+  overflow: hidden;
+  border-right: dashed medium navy;
+  border-left: dashed medium navy;
+  margin: auto;
+}
+nav {
+  float: left;
+  width: 110px;
+  padding-left: 10px;
+}
+article {
+  float: left;
+  width: 600px;
+  padding: 5px;
+  text-align: center;
+}
+footer {
+  box-sizing: border-box;
+  text-align: center;
+  width: 766px;
+  height: 90px;
+  border: dashed medium navy;
+  background-color: #CCCCCC;
+  margin: auto;
+  padding-top: 12px;
+}
+.logoleft {
+  float: left;
+  padding-top: 30px;
+  padding-left: 15px;
+}
+.banner { max-width: 100%; height: auto; margin-top: 4px; }
+nav a {
+  border: 2px inset #CCCCCC;
+  background-color: maroon;
+  line-height: 250%;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 17px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: yellow;
+  border: 2px outset #CCCCCC;
+}
+.welcome { max-width: 100%; height: auto; }
+.artist-logo { width: 90px; height: auto; }
+.description { font-size: 13px; }
+footer img { max-width: 100%; height: auto; }
