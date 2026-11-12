@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200">
+  <title>Extreme Honeymoons Mountain Logo</title>
+
+  <circle cx="100" cy="100" r="91"
+          fill="#102C3B"
+          stroke="#D8B77C"
+          stroke-width="3"/>
+
+  <circle cx="100" cy="100" r="82"
+          fill="none"
+          stroke="#D8B77C"
+          stroke-width="1"
+          opacity="0.6"/>
+
+  <path d="M30 130 L78 62 L102 94
+           L124 72 L171 130"
+        fill="none"
+        stroke="#D8B77C"
+        stroke-width="5"
+        stroke-linejoin="round"/>
+
+  <path d="M65 80 L78 62 L91 80
+           M113 86 L124 72 L136 88"
+        fill="none"
+        stroke="#F4F0E8"
+        stroke-width="3"/>
+
+  <path d="M30 134 Q100 110 170 134"
+        fill="none"
+        stroke="#D8B77C"
+        stroke-width="2"/>
+
+  <text x="100" y="158"
+        text-anchor="middle"
+        fill="#F4F0E8"
+        font-family="Georgia, serif"
+        font-size="13"
+        letter-spacing="1.5">
+    EXTREME
+  </text>
+
+  <text x="100" y="174"
+        text-anchor="middle"
+        fill="#D8B77C"
+        font-family="Georgia, serif"
+        font-size="10"
+        letter-spacing="1.5">
+    HONEYMOONS
+  </text>
+</svg>
