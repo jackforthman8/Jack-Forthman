@@ -2,78 +2,196 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey | Extreme Honeymoons</title>
     <link rel="stylesheet" href="mystyles.css">
     <script src="myscripts.js" defer></script>
 </head>
-<body>
 
+<body>
 <div id="container">
+
     <header>
         <div class="branding">
+
             <a href="Home.html"
-               onmouseover="swapMe('logo','logo2.jpg')"
-               onmouseout="swapMe('logo','logo1.jpg')"
-               onfocus="swapMe('logo','logo2.jpg')"
-               onblur="swapMe('logo','logo1.jpg')">
-                <img id="logo" src="Images/logo1.jpg"
-                     alt="Extreme Honeymoons logo">
+               class="logo-link"
+               onmouseover="swapMe('logo','logo2.svg')"
+               onmouseout="swapMe('logo','logo1.svg')">
+                <img id="logo"
+                     src="Images/logo1.svg"
+                     alt="Extreme Honeymoons mountain logo">
             </a>
 
-            <img class="banner" src="Images/banner.jpg"
-                 alt="Extreme Honeymoons adventure banner">
+            <div class="brand-heading">
+                <p class="eyebrow">EXPLORE BEYOND ORDINARY</p>
+                <p class="brand-name">EXTREME HONEYMOONS</p>
+                <p class="tagline">ADVENTURE BEGINS TOGETHER</p>
+            </div>
+
+            <img class="banner"
+                 src="Images/banner.jpg"
+                 alt="Extreme Honeymoons mountain adventure banner">
         </div>
 
         <nav aria-label="Main navigation">
             <a href="Home.html">Home</a>
             <a href="AboutUs.html">About Us</a>
             <a href="Tributes.html">Tributes</a>
-            <a href="Survey.html">Survey</a>
+            <a href="Survey.html" aria-current="page">Survey</a>
             <a href="Favorites.html">Favorites</a>
         </nav>
     </header>
 
     <section>
         <article>
-            <h1>Honeymoon Survey</h1>
+
+            <h1>Extreme Honeymoons: Survey</h1>
+
+            <h2>Plan Your Dream Adventure</h2>
 
             <p>
-                What kind of adventure would you enjoy
-                on your honeymoon?
+                Tell us what your ideal honeymoon
+                would look like! Complete the survey
+                below to explore your adventure style.
             </p>
 
-            <form>
-                <label for="adventure">
-                    Choose an adventure:
-                </label>
+            <form id="honeymoonSurvey">
 
-                <select id="adventure" name="adventure">
-                    <option>Mountain biking</option>
-                    <option>Scuba diving</option>
-                    <option>Snowboarding</option>
-                    <option>Mountain hiking</option>
-                </select>
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="fullName">Full Name:</label>
+                        <input type="text"
+                               id="fullName"
+                               name="fullName"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Honeymoon Preferences</legend>
+
+                    <p>
+                        <label for="destination">
+                            Preferred Destination:
+                        </label>
+
+                        <select id="destination"
+                                name="destination">
+                            <option value="mountains">Mountains</option>
+                            <option value="beach">Beach</option>
+                            <option value="forest">Forest</option>
+                            <option value="snow">Snowy Destination</option>
+                            <option value="anywhere">Anywhere Adventurous</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        Favorite Adventure Activity:
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="radio"
+                                   name="activity"
+                                   value="hiking"
+                                   required>
+                            Hiking
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="radio"
+                                   name="activity"
+                                   value="scuba">
+                            Scuba Diving
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="radio"
+                                   name="activity"
+                                   value="snowboarding">
+                            Snowboarding
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="radio"
+                                   name="activity"
+                                   value="biking">
+                            Mountain Biking
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="comments">
+                            Describe Your Dream Honeymoon:
+                        </label>
+                    </p>
+
+                    <p>
+                        <textarea id="comments"
+                                  name="comments"
+                                  rows="5"
+                                  cols="40"></textarea>
+                    </p>
+                </fieldset>
 
                 <p>
-                    <button type="button"
-                        onclick="alert('Thanks for sharing your preference!')">
-                        Submit preference
-                    </button>
+                    <button type="submit">Submit Survey</button>
+                    <button type="reset">Clear Form</button>
                 </p>
+
+                <p id="surveyMessage" role="status"></p>
+
             </form>
+
+            <script>
+                document.getElementById("honeymoonSurvey")
+                    .addEventListener("submit", function(event) {
+                        event.preventDefault();
+
+                        document.getElementById("surveyMessage")
+                            .textContent =
+                            "Thank you for completing our survey! " +
+                            "This educational demonstration does not " +
+                            "send or save your answers.";
+                    });
+            </script>
+
         </article>
     </section>
 
     <footer>
-        <a href="mailto:webmaster@example.com">
-            Email the Webmaster
-        </a>
-        |
-        This web site has been created solely for
-        educational purposes.
-    </footer>
-</div>
+        <p>EXTREME HONEYMOONS</p>
+        <p>Adventure Begins Together</p>
 
+        <p>
+            <a href="mailto:webmaster@example.com">
+                Email the Webmaster
+            </a>
+        </p>
+
+        <p>
+            This web site has been created solely
+            for educational purposes.
+        </p>
+    </footer>
+
+</div>
 </body>
 </html>
