@@ -2,27 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorites | Extreme Honeymoons</title>
     <link rel="stylesheet" href="mystyles.css">
     <script src="myscripts.js" defer></script>
 </head>
-<body>
 
+<body>
 <div id="container">
+
     <header>
         <div class="branding">
+
             <a href="Home.html"
-               onmouseover="swapMe('logo','logo2.jpg')"
-               onmouseout="swapMe('logo','logo1.jpg')"
-               onfocus="swapMe('logo','logo2.jpg')"
-               onblur="swapMe('logo','logo1.jpg')">
-                <img id="logo" src="Images/logo1.jpg"
-                     alt="Extreme Honeymoons logo">
+               class="logo-link"
+               onmouseover="swapMe('logo','logo2.svg')"
+               onmouseout="swapMe('logo','logo1.svg')">
+                <img id="logo"
+                     src="Images/logo1.svg"
+                     alt="Extreme Honeymoons mountain logo">
             </a>
 
-            <img class="banner" src="Images/banner.jpg"
-                 alt="Extreme Honeymoons adventure banner">
+            <div class="brand-heading">
+                <p class="eyebrow">EXPLORE BEYOND ORDINARY</p>
+                <p class="brand-name">EXTREME HONEYMOONS</p>
+                <p class="tagline">ADVENTURE BEGINS TOGETHER</p>
+            </div>
+
+            <img class="banner"
+                 src="Images/banner.jpg"
+                 alt="Extreme Honeymoons mountain adventure banner">
         </div>
 
         <nav aria-label="Main navigation">
@@ -30,38 +39,102 @@
             <a href="AboutUs.html">About Us</a>
             <a href="Tributes.html">Tributes</a>
             <a href="Survey.html">Survey</a>
-            <a href="Favorites.html">Favorites</a>
+            <a href="Favorites.html" aria-current="page">Favorites</a>
         </nav>
     </header>
 
     <section>
         <article>
-            <h1>Our Favorite Excursions</h1>
+
+            <h1>Extreme Honeymoons: Favorites</h1>
+
+            <h2>Our Favorite Honeymoon Adventures</h2>
 
             <p>
-                Discover the adventures featured in our
-                gallery: mountain biking, scuba diving,
-                snowboarding, and mountain hiking.
+                Looking for an unforgettable honeymoon?
+                Explore some of our favorite adventure
+                activities for couples who love excitement
+                and discovering new places.
+            </p>
+
+            <h2>1. Mountain Biking</h2>
+
+            <img src="Images/Image1Sm.jpg"
+                 alt="Mountain biking adventure">
+
+            <p>
+                Experience beautiful mountain landscapes
+                while exploring exciting biking trails
+                together.
+            </p>
+
+            <h2>2. Scuba Diving</h2>
+
+            <img src="Images/Image2Sm.jpg"
+                 alt="Scuba diving adventure">
+
+            <p>
+                Discover underwater scenery and
+                marine life while sharing a unique
+                ocean adventure.
+            </p>
+
+            <h2>3. Snowboarding</h2>
+
+            <img src="Images/Image3Sm.jpg"
+                 alt="Snowboarding adventure">
+
+            <p>
+                Enjoy the thrill of snowy mountain
+                slopes and make unforgettable
+                winter memories.
+            </p>
+
+            <h2>4. Hiking</h2>
+
+            <img src="Images/Image4Sm.jpg"
+                 alt="Outdoor hiking adventure">
+
+            <p>
+                Explore scenic trails, breathtaking
+                views, and beautiful destinations
+                with your partner.
+            </p>
+
+            <h2>Choose Your Next Adventure</h2>
+
+            <p>
+                Every couple has a different idea
+                of the perfect honeymoon. The best
+                adventure is one that you can enjoy
+                and remember together.
             </p>
 
             <p>
-                <a href="Home.html">
-                    Explore the gallery &gt;&gt;
+                <a href="Survey.html">
+                    Complete Our Honeymoon Survey
                 </a>
             </p>
+
         </article>
     </section>
 
     <footer>
-        <a href="mailto:webmaster@example.com">
-            Email the Webmaster
-        </a>
-        |
-        This web site has been created solely for
-        educational purposes.
-    </footer>
-</div>
+        <p>EXTREME HONEYMOONS</p>
+        <p>Adventure Begins Together</p>
 
+        <p>
+            <a href="mailto:webmaster@example.com">
+                Email the Webmaster
+            </a>
+        </p>
+
+        <p>
+            This web site has been created solely
+            for educational purposes.
+        </p>
+    </footer>
+
+</div>
 </body>
 </html>
-
