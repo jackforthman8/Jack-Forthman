@@ -4,30 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Extreme Honeymoons</title>
+    <title>Extreme Honeymoons | Adventure Begins Together</title>
     <link rel="stylesheet" href="mystyles.css">
     <script src="myscripts.js" defer></script>
 </head>
-<body onload="preloadImages()">
 
+<body>
 <div id="container">
+
     <header>
         <div class="branding">
-            <a href="Home.html"
-               onmouseover="swapMe('logo','logo2.jpg')"
-               onmouseout="swapMe('logo','logo1.jpg')"
-               onfocus="swapMe('logo','logo2.jpg')"
-               onblur="swapMe('logo','logo1.jpg')">
-                <img id="logo" src="Images/logo1.jpg"
-                     alt="Extreme Honeymoons logo">
+            <a class="logo-link" href="Home.html"
+               onmouseover="swapMe('logo','logo2.svg')"
+               onmouseout="swapMe('logo','logo1.svg')"
+               onfocus="swapMe('logo','logo2.svg')"
+               onblur="swapMe('logo','logo1.svg')">
+                <img id="logo" src="Images/logo1.svg"
+                     alt="Extreme Honeymoons mountain logo">
             </a>
+
+            <div class="brand-heading">
+                <p class="eyebrow">EXPLORE BEYOND ORDINARY</p>
+                <p class="brand-name">EXTREME HONEYMOONS</p>
+                <p class="tagline">ADVENTURE BEGINS TOGETHER</p>
+            </div>
 
             <img class="banner" src="Images/banner.jpg"
                  alt="Extreme Honeymoons adventure banner">
         </div>
 
         <nav aria-label="Main navigation">
-            <a href="Home.html">Home</a>
+            <a href="Home.html" aria-current="page">Home</a>
             <a href="AboutUs.html">About Us</a>
             <a href="Tributes.html">Tributes</a>
             <a href="Survey.html">Survey</a>
@@ -37,102 +44,141 @@
 
     <section>
         <article>
-            <h1>Welcome to Extreme Honeymoons!</h1>
 
-            <p>
-                If you are just getting hitched,
-                we can help make your honeymoon outrageous.
-            </p>
-
-            <p>
-                Take a look at our Excursions and take
-                the opportunity to complete our survey.
-            </p>
-
-            <button class="print" type="button"
-                    onclick="window.print()"
-                    onmouseover="swapMe('print','print2.jpg')"
-                    onmouseout="swapMe('print','print1.jpg')"
-                    onfocus="swapMe('print','print2.jpg')"
-                    onblur="swapMe('print','print1.jpg')">
-                <img id="print" src="Images/print1.jpg"
-                     alt="Print this page">
-            </button>
-
-            <h2>Explore Our Honeymoon Adventures</h2>
-
-            <p>
-                Hover over or select an adventure thumbnail
-                to see the larger image.
-            </p>
-
-            <div id="thumbs">
-                <img src="Images/Image1Sm.jpg"
-                     alt="Mountain biking thumbnail"
-                     tabindex="0"
-                     onmouseover="swapImage(0)"
-                     onfocus="swapImage(0)"
-                     onclick="swapImage(0)">
-
-                <img src="Images/Image2Sm.jpg"
-                     alt="Scuba diving thumbnail"
-                     tabindex="0"
-                     onmouseover="swapImage(1)"
-                     onfocus="swapImage(1)"
-                     onclick="swapImage(1)">
-
-                <img src="Images/Image3Sm.jpg"
-                     alt="Snowboarding thumbnail"
-                     tabindex="0"
-                     onmouseover="swapImage(2)"
-                     onfocus="swapImage(2)"
-                     onclick="swapImage(2)">
-
-                <img src="Images/Image4Sm.jpg"
-                     alt="Mountain hiking thumbnail"
-                     tabindex="0"
-                     onmouseover="swapImage(3)"
-                     onfocus="swapImage(3)"
-                     onclick="swapImage(3)">
-            </div>
-
-            <div id="image">
-                <img id="theImage"
-                     src="Images/Image1Lg.jpg"
-                     alt="Mountain Biking Adventure">
-
-                <h3 id="bottomText">
-                    Mountain Biking Adventure
-                </h3>
-            </div>
-
-            <h2>Adventure Tribute</h2>
-
-            <div class="tribute">
-                <img src="Images/CoupleHikingSm.jpg"
-                     alt="Couple enjoying an outdoor adventure">
+            <div class="intro">
+                <p class="eyebrow">THE JOURNEY STARTS HERE</p>
+                <h1>Welcome to Extreme Honeymoons!</h1>
 
                 <p>
-                    Some of the best memories are made when
-                    two people discover something new together.
-                    An adventurous honeymoon can turn a shared
-                    love of the outdoors into an unforgettable
-                    beginning.
-                    <a href="Tributes.html">more &gt;&gt;</a>
+                    If you are just getting hitched,
+                    we can help make your honeymoon outrageous.
+                </p>
+
+                <p>
+                    Take a look at our Excursions and take
+                    the opportunity to complete our survey.
+                </p>
+
+                <p class="intro-note">
+                    For couples who believe the greatest love
+                    stories are written beyond the ordinary.
                 </p>
             </div>
+
+            <div class="print-area">
+                <button type="button" class="print-button"
+                        onclick="window.print()"
+                        aria-label="Print this page">
+                    <img id="print" src="Images/print1.jpg"
+                         alt="Print page"
+                         onmouseover="swapMe('print','print2.jpg')"
+                         onmouseout="swapMe('print','print1.jpg')">
+                </button>
+            </div>
+
+            <div class="section-heading">
+                <p class="eyebrow">DISCOVER THE EXTRAORDINARY</p>
+                <h2>Our Signature Adventures</h2>
+                <p>
+                    Explore a world of unforgettable experiences.
+                    Hover over or click an image to discover
+                    your next adventure together.
+                </p>
+            </div>
+
+            <div class="gallery">
+                <div id="thumbs">
+                    <button type="button"
+                            onclick="swapImage(0)"
+                            onmouseover="swapImage(0)"
+                            onfocus="swapImage(0)"
+                            aria-label="View mountain biking">
+                        <img src="Images/Image1Sm.jpg"
+                             alt="Mountain biking adventure">
+                    </button>
+
+                    <button type="button"
+                            onclick="swapImage(1)"
+                            onmouseover="swapImage(1)"
+                            onfocus="swapImage(1)"
+                            aria-label="View scuba diving">
+                        <img src="Images/Image2Sm.jpg"
+                             alt="Scuba diving adventure">
+                    </button>
+
+                    <button type="button"
+                            onclick="swapImage(2)"
+                            onmouseover="swapImage(2)"
+                            onfocus="swapImage(2)"
+                            aria-label="View snowboarding">
+                        <img src="Images/Image3Sm.jpg"
+                             alt="Snowboarding adventure">
+                    </button>
+
+                    <button type="button"
+                            onclick="swapImage(3)"
+                            onmouseover="swapImage(3)"
+                            onfocus="swapImage(3)"
+                            aria-label="View mountain hiking">
+                        <img src="Images/Image4Sm.jpg"
+                             alt="Mountain hiking adventure">
+                    </button>
+                </div>
+
+                <div id="image">
+                    <img id="theImage"
+                         src="Images/Image1Lg.jpg"
+                         alt="Mountain biking adventure">
+
+                    <h3 id="bottomText">
+                        Mountain Biking Adventure
+                    </h3>
+                </div>
+            </div>
+
+            <div class="tribute-section">
+                <p class="eyebrow">STORIES WORTH SHARING</p>
+                <h2>Love Beyond the Ordinary</h2>
+
+                <div class="tribute">
+                    <img src="Images/CoupleHikingSm.jpg"
+                         alt="Couple hiking together">
+
+                    <div>
+                        <p>
+                            Every great adventure begins with
+                            someone by your side. From mountain
+                            trails to unforgettable destinations,
+                            discover the experiences that bring
+                            couples closer together.
+                        </p>
+
+                        <a href="Tributes.html">
+                            Read Our Tributes &gt;&gt;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </article>
     </section>
 
     <footer>
-        <a href="mailto:webmaster@example.com">
-            Email the Webmaster
-        </a>
-        |
-        This web site has been created solely for
-        educational purposes.
-    </footer>
-</div>
+        <p class="footer-brand">EXTREME HONEYMOONS</p>
+        <p>ADVENTURE BEGINS TOGETHER</p>
 
+        <p>
+            <a href="mailto:webmaster@example.com">
+                Email the Webmaster
+            </a>
+        </p>
+
+        <p class="disclaimer">
+            This web site has been created solely
+            for educational purposes.
+        </p>
+    </footer>
+
+</div>
 </body>
 </html>
