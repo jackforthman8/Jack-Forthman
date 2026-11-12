@@ -1,52 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Extreme Honeymoons | Adventure Begins Together</title>
+
     <link rel="stylesheet" href="mystyles.css">
+
     <script src="myscripts.js" defer></script>
 </head>
 
 <body>
+
 <div id="container">
 
+    <!-- HEADER -->
     <header>
+
         <div class="branding">
-            <a class="logo-link" href="Home.html"
+
+            <!-- NEW EXTREME HONEYMOONS LOGO -->
+            <a href="Home.html"
+               class="logo-link"
                onmouseover="swapMe('logo','logo2.svg')"
                onmouseout="swapMe('logo','logo1.svg')"
                onfocus="swapMe('logo','logo2.svg')"
                onblur="swapMe('logo','logo1.svg')">
-                <img id="logo" src="Images/logo1.svg"
+
+                <img id="logo"
+                     src="Images/logo1.svg"
                      alt="Extreme Honeymoons mountain logo">
+
             </a>
 
+            <!-- NEW BUSINESS NAME -->
             <div class="brand-heading">
-                <p class="eyebrow">EXPLORE BEYOND ORDINARY</p>
-                <p class="brand-name">EXTREME HONEYMOONS</p>
-                <p class="tagline">ADVENTURE BEGINS TOGETHER</p>
+
+                <p class="eyebrow">
+                    EXPLORE BEYOND ORDINARY
+                </p>
+
+                <p class="brand-name">
+                    EXTREME HONEYMOONS
+                </p>
+
+                <p class="tagline">
+                    ADVENTURE BEGINS TOGETHER
+                </p>
+
             </div>
 
-            <img class="banner" src="Images/banner.jpg"
-                 alt="Extreme Honeymoons adventure banner">
+            <!-- NEW TEXT-BASED ADVENTURE BANNER -->
+            <div class="adventure-banner"
+                 style="background-color:#176D78;
+                        border:3px solid #D8B77C;
+                        padding:25px 15px;
+                        text-align:center;">
+
+                <p style="color:#FFFFFF;
+                          font-family:Georgia,serif;
+                          font-size:24px;
+                          text-align:center;
+                          margin:0;">
+                    YOUR GREATEST ADVENTURE STARTS HERE
+                </p>
+
+                <p style="color:#F4F0E8;
+                          font-size:12px;
+                          letter-spacing:2px;
+                          text-align:center;
+                          margin:10px 0 0;">
+                    EXPLORE • EXPERIENCE • REMEMBER
+                </p>
+
+            </div>
+
         </div>
 
+        <!-- NAVIGATION -->
         <nav aria-label="Main navigation">
-            <a href="Home.html" aria-current="page">Home</a>
-            <a href="AboutUs.html">About Us</a>
-            <a href="Tributes.html">Tributes</a>
-            <a href="Survey.html">Survey</a>
-            <a href="Favorites.html">Favorites</a>
+
+            <a href="Home.html"
+               aria-current="page">
+                Home
+            </a>
+
+            <a href="AboutUs.html">
+                About Us
+            </a>
+
+            <a href="Tributes.html">
+                Tributes
+            </a>
+
+            <a href="Survey.html">
+                Survey
+            </a>
+
+            <a href="Favorites.html">
+                Favorites
+            </a>
+
         </nav>
+
     </header>
 
+    <!-- MAIN CONTENT -->
     <section>
+
         <article>
 
+            <!-- WELCOME -->
             <div class="intro">
-                <p class="eyebrow">THE JOURNEY STARTS HERE</p>
-                <h1>Welcome to Extreme Honeymoons!</h1>
+
+                <p class="eyebrow">
+                    THE JOURNEY STARTS HERE
+                </p>
+
+                <h1>
+                    Welcome to Extreme Honeymoons!
+                </h1>
 
                 <p>
                     If you are just getting hitched,
@@ -59,72 +136,107 @@
                 </p>
 
                 <p class="intro-note">
-                    For couples who believe the greatest love
-                    stories are written beyond the ordinary.
+                    For couples who believe the greatest
+                    love stories are written beyond
+                    the ordinary.
                 </p>
+
             </div>
 
+            <!-- PRINT BUTTON -->
             <div class="print-area">
-                <button type="button" class="print-button"
+
+                <button type="button"
+                        class="print-button"
                         onclick="window.print()"
                         aria-label="Print this page">
-                    <img id="print" src="Images/print1.jpg"
-                         alt="Print page"
+
+                    <img id="print"
+                         src="Images/print1.jpg"
+                         alt="Print this page"
                          onmouseover="swapMe('print','print2.jpg')"
-                         onmouseout="swapMe('print','print1.jpg')">
+                         onmouseout="swapMe('print','print1.jpg')"
+                         onfocus="swapMe('print','print2.jpg')"
+                         onblur="swapMe('print','print1.jpg')">
+
                 </button>
+
             </div>
 
+            <!-- ADVENTURE GALLERY HEADING -->
             <div class="section-heading">
-                <p class="eyebrow">DISCOVER THE EXTRAORDINARY</p>
-                <h2>Our Signature Adventures</h2>
-                <p>
-                    Explore a world of unforgettable experiences.
-                    Hover over or click an image to discover
-                    your next adventure together.
+
+                <p class="eyebrow">
+                    DISCOVER THE EXTRAORDINARY
                 </p>
+
+                <h2>
+                    Our Signature Adventures
+                </h2>
+
+                <p>
+                    Explore a world of unforgettable
+                    experiences. Hover over or select
+                    an adventure thumbnail to see
+                    the larger image.
+                </p>
+
             </div>
 
+            <!-- INTERACTIVE IMAGE GALLERY -->
             <div class="gallery">
+
                 <div id="thumbs">
+
                     <button type="button"
                             onclick="swapImage(0)"
                             onmouseover="swapImage(0)"
                             onfocus="swapImage(0)"
-                            aria-label="View mountain biking">
+                            aria-label="Mountain biking adventure">
+
                         <img src="Images/Image1Sm.jpg"
-                             alt="Mountain biking adventure">
+                             alt="Mountain biking thumbnail">
+
                     </button>
 
                     <button type="button"
                             onclick="swapImage(1)"
                             onmouseover="swapImage(1)"
                             onfocus="swapImage(1)"
-                            aria-label="View scuba diving">
+                            aria-label="Scuba diving adventure">
+
                         <img src="Images/Image2Sm.jpg"
-                             alt="Scuba diving adventure">
+                             alt="Scuba diving thumbnail">
+
                     </button>
 
                     <button type="button"
                             onclick="swapImage(2)"
                             onmouseover="swapImage(2)"
                             onfocus="swapImage(2)"
-                            aria-label="View snowboarding">
+                            aria-label="Snowboarding adventure">
+
                         <img src="Images/Image3Sm.jpg"
-                             alt="Snowboarding adventure">
+                             alt="Snowboarding thumbnail">
+
                     </button>
 
                     <button type="button"
                             onclick="swapImage(3)"
                             onmouseover="swapImage(3)"
                             onfocus="swapImage(3)"
-                            aria-label="View mountain hiking">
+                            aria-label="Mountain hiking adventure">
+
                         <img src="Images/Image4Sm.jpg"
-                             alt="Mountain hiking adventure">
+                             alt="Mountain hiking thumbnail">
+
                     </button>
+
                 </div>
 
+                <!-- LARGE IMAGE DISPLAY -->
                 <div id="image">
+
                     <img id="theImage"
                          src="Images/Image1Lg.jpg"
                          alt="Mountain biking adventure">
@@ -132,39 +244,63 @@
                     <h3 id="bottomText">
                         Mountain Biking Adventure
                     </h3>
+
                 </div>
+
             </div>
 
+            <!-- MINI TRIBUTE -->
             <div class="tribute-section">
-                <p class="eyebrow">STORIES WORTH SHARING</p>
-                <h2>Love Beyond the Ordinary</h2>
+
+                <p class="eyebrow">
+                    STORIES WORTH SHARING
+                </p>
+
+                <h2>
+                    Love Beyond the Ordinary
+                </h2>
 
                 <div class="tribute">
+
                     <img src="Images/CoupleHikingSm.jpg"
                          alt="Couple hiking together">
 
                     <div>
+
                         <p>
-                            Every great adventure begins with
-                            someone by your side. From mountain
-                            trails to unforgettable destinations,
-                            discover the experiences that bring
-                            couples closer together.
+                            Every great adventure begins
+                            with someone by your side.
+                            From mountain trails to
+                            unforgettable destinations,
+                            discover the experiences
+                            that bring couples closer
+                            together.
                         </p>
 
                         <a href="Tributes.html">
                             Read Our Tributes &gt;&gt;
                         </a>
+
                     </div>
+
                 </div>
+
             </div>
 
         </article>
+
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p class="footer-brand">EXTREME HONEYMOONS</p>
-        <p>ADVENTURE BEGINS TOGETHER</p>
+
+        <p class="footer-brand">
+            EXTREME HONEYMOONS
+        </p>
+
+        <p>
+            ADVENTURE BEGINS TOGETHER
+        </p>
 
         <p>
             <a href="mailto:webmaster@example.com">
@@ -176,8 +312,10 @@
             This web site has been created solely
             for educational purposes.
         </p>
+
     </footer>
 
 </div>
+
 </body>
 </html>
