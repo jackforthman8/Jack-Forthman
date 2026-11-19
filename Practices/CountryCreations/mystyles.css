@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("Images/background.gif");
+    font-family: Arial, Helvetica, sans-serif;
+    color: #30364f;
+}
+
+header {
+    width: 760px;
+    max-width: 100%;
+    min-height: 150px;
+    background-color: #ccc;
+    text-align: center;
+    padding: 10px;
+    border: medium dashed navy;
+    margin: auto;
+}
+
+header .logoleft {
+    float: left;
+    padding-top: 30px;
+    padding-left: 5px;
+}
+
+header .banner {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    width: 760px;
+    max-width: 100%;
+    min-height: 400px;
+    background-color: #fff0c7;
+    background-image: url("Images/inner_background.gif");
+    background-repeat: repeat-y;
+    overflow: hidden;
+    border-right: medium dashed navy;
+    border-left: medium dashed navy;
+    margin: auto;
+}
+
+nav {
+    float: left;
+    width: 120px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+nav a {
+    display: inline-block;
+    border: 2px inset #ccc;
+    background-color: maroon;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    min-width: 95px;
+    text-align: center;
+}
+
+nav a:hover,
+nav a:focus {
+    color: yellow;
+    border: 2px outset #ccc;
+}
+
+article {
+    float: left;
+    width: 620px;
+    max-width: calc(100% - 120px);
+    padding: 20px;
+    text-align: center;
+}
+
+article h1 {
+    color: #4b6087;
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+article p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    width: 760px;
+    max-width: 100%;
+    min-height: 70px;
+    border: medium dashed navy;
+    background-color: #ccc;
+    margin: auto;
+    padding: 12px;
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    header .logoleft {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    nav, article {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        margin: 4px;
+    }
+
+    section {
+        background-image: none;
+    }
+}
