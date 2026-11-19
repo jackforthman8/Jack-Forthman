@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Country Creations</title>
+<!-- TemplateEndEditable -->
+
+<link href="../mystyles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<header>
+    <img src="../Images/cclogo.gif" alt="Country Creations Logo" class="logoleft">
+    <img src="../Images/ccbanner.png" alt="Country Creations Banner" class="banner">
+</header>
+
+<section>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <br>
+    <a href="../AboutUs.html">About Us</a>
+    <br>
+    <a href="../Tributes.html">Tributes</a>
+</nav>
+
+<article>
+
+<!-- TemplateBeginEditable name="MainContent" -->
+
+<h1>Country Creations</h1>
+
+<p>
+Replace this section with the content
+for each individual page.
+</p>
+
+<!-- TemplateEndEditable -->
+
+</article>
+
+</section>
+
+<footer>
+    <img src="../Images/heartline.gif" alt="Sewing Hearts">
+</footer>
+
+</body>
+</html>
